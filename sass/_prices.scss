@@ -1,0 +1,133 @@
+/*Prices*/
+
+.prices{
+	@include floatWidth;
+	@include generalPadding;
+	
+	.bk{
+		@include floatWidth;
+		height:457px;	
+		position:relative;
+		z-index:1;
+	}
+	
+	.pricesInfo{
+		position:relative;
+		z-index:2;
+		@include floatWidth;
+		text-align:center;
+		margin:-400px 0 0 0;
+		
+		h2{
+			color:$white;
+			font-size:1.875em;
+			font-weight:600;
+			margin:0;
+			@include letterSpacing;
+		}
+		
+		p{
+			font-size: 1.188em;
+			font-weight: 600;
+			margin: 8px 0 0 0;
+			color:$white;
+		}
+		
+		.priceHolder{
+			@include floatWidth;
+			
+			article{
+				margin:55px 0 0 0;
+				width:25%;
+				height:441px;
+				background:$white;
+				float:left;
+				border-bottom:3px solid $lightGraySep;
+				border-left:1px solid $lightGraySep;
+				padding:35px 10px 45px 10px;
+				text-align:center;
+				@include transition(all 0.3s ease-in);
+				
+				&.selected{
+					height:456px;
+					margin:40px 0 0 0;
+					border-bottom:3px solid $mainColor;
+					
+					a{
+						@include buttonStyle2;
+					}
+				}
+				
+				&:hover{
+					height:456px;
+					margin:40px 0 0 0;
+					border-bottom:3px solid $mainColor;
+					
+					a{
+						@include buttonStyle2;
+					}
+				}
+
+				&.last{
+					border-right:1px solid $lightGraySep;
+				}
+				
+				h3{
+					color:$mainColor;
+					font-size: 1.188em;
+					margin:0 0 25px 0;
+				}
+				
+				h4{
+					font-size:2.563em;
+					font-weight:200;
+					margin:0;
+					color:$documentTextColorDarker;
+					padding:0 0 30px 0;
+					border-bottom:1px solid $lightGraySep;
+					@include letterSpacing;
+					
+					sup{
+						font-weight:600;
+						font-size:0.415em;
+						color:$documentTextColorDarkest;
+					}
+					
+					span{
+						font-weight:700;
+						font-size:0.341em;
+						color:$documentTextColorDarkest;
+						margin:0 0 0 4px;
+					}
+				}
+				
+				ul{
+					list-style:none;
+					margin:30px 0 25px 0;
+					padding:0;
+					
+					li{
+						padding:0 0 10px 0;
+						font-size:1.063em;
+						font-weight:400;
+						color:$documentTextColorDarker;
+						@include letterSpacing;
+						
+						b{
+							color:$documentTextColorDarkest;
+						}
+					}
+				}
+				
+				a{
+					@include buttonStyle;
+					padding:7px 40px;
+					font-size:1.125em;
+					font-weight:600;
+					margin:11px 0;
+					display:inline-block;
+				}
+			}
+		}
+	}
+}

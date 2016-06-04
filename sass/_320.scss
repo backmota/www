@@ -1,0 +1,74 @@
+/*Mobile Styling*/
+
+@media only screen and (max-width: 320px) {
+	
+	body{
+		font-size:0.875em;
+	}
+	
+	section.banner{
+	 .bannerNav{
+	 	display:none;
+	 }
+	
+     .bannerImages {
+		height:408px;
+			
+		.slide{ 
+		  height:408px;
+			img{
+				max-width:1400px;
+				margin: 0 0 0 -700px;
+			}
+			
+			.text .holder a{
+				margin: 20px 0 0 0;
+			}
+		  }
+		}
+	 }
+	
+	.prices {
+		.pricesInfo .priceHolder article{
+			width:100%;
+		}
+	}
+	
+	section.works .small-12.element{
+		width:100%;
+	}
+	
+	section.blog .large-6.column{
+		width:100%;
+	}
+	
+	.heading br{
+		display:none;
+	}
+	
+	section.services .service a{
+		.iconHolder{
+			width:100%;
+			margin:0 0 10px 0;
+		}
+		.info{
+			width:100%;
+		}
+	}
+	
+	section.parallax{
+		height:300px;
+		
+		.holder{
+			height:300px;
+			
+			.content .box {
+				padding:30px;
+			}
+		}
+	}
+	
+	 
+	
+
+}

@@ -1,0 +1,120 @@
+/*General*/
+
+/*General Mixins*/
+
+@mixin floatWidth {
+	float:left;
+	width:100%;
+}
+
+@mixin letterSpacing{
+	letter-spacing:-1px;
+}
+
+@mixin generalPadding{
+	padding:50px 0;
+}
+
+@mixin buttonStyle{
+	background:$mainColor;
+	color:$white;
+	text-transform:uppercase;
+	font-weight:600;
+	border:2px solid $mainColor;
+	@include transition(color 0.2s ease-in, background 0.2s ease-in, border 0.2s ease-in );
+	
+	&:hover{
+		background:none;
+		color:$mainColor;
+		border:2px solid $mainColor;
+	}
+}
+
+@mixin buttonStyle2{
+	background:none;
+	color:$mainColor;
+	text-transform:uppercase;
+	font-weight:600;
+	border:2px solid $mainColor;
+	@include transition(color 0.2s ease-in, background 0.2s ease-in, border 0.2s ease-in );
+	
+	&:hover{
+		background:$mainColor;
+		color:$white;
+		border:2px solid $mainColor;
+	}
+}
+
+@mixin buttonStyleBanner{
+	color:$white;
+	text-transform:uppercase;
+	font-weight:600;
+	border:2px solid $white;
+	@include transition(color 0.4s ease-in, background 0.4s ease-in, border 0.2s ease-in );
+	
+	&:hover{
+		background:$white;
+		color:$mainColor;
+	}
+}
+
+
+/*General Document Styles*/
+
+body{
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	color:$documentTextColor;
+}
+
+.heading{
+	@include floatWidth;
+	padding:0 0 40px 0;
+	text-align:center;
+
+	h2{
+		color:$mainColor;
+		font-size:1.875em;
+		font-weight:400;
+		margin:0;
+		@include letterSpacing;
+	}
+	
+	p{
+		font-size:1.188em;
+		font-weight:400;
+		margin:17px 0;
+	}
+	
+	span{
+		height:3px;
+		width:40px;
+		background:$headingTextColor;
+		display:inline-block;
+	}
+}
+
+.nicescroll-rails{
+
+	z-index:9999999999 !important;
+	
+	div{
+		@include border-radius(0!important);
+		background-color:$mainColor !important;
+		border-color:$mainColor !important;
+	}
+}
+
+.loading{
+	width:100%;
+	height:100%;
+	position:fixed;
+	background:$white;
+	z-index:10000;
+	text-align:center;
+	display:table;
+	
+	.holder{
+		display:table-cell;
+		vertical-align:middle;
+	}
+}

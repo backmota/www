@@ -1,0 +1,158 @@
+/*Team*/
+
+.teamMembers{
+	@include floatWidth;
+	padding:0 0 50px 0;
+	
+	article.member{
+		@include floatWidth;
+		@include perspective(1000);
+		
+		.flipper, .front, .back{
+			@include floatWidth;
+		}
+		
+		.flipper {
+			@include transition(1s);
+			@include transform-style(preserve-3d);
+			position: relative;
+		}
+		
+		.front, .back {
+			@include backface-visibility(hidden);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		
+		.front{
+			z-index:2;
+			text-align:center;
+		}
+		
+		.back {
+			@include transform(rotateY(180deg));
+			background:$mainColor;
+			display:table;
+			
+			.holder{
+				display:table-cell;
+				vertical-align:middle;
+				text-align:center;
+				color: $white;
+				padding:0 20px;
+				
+				h4{
+					font-size: 1.625em;
+					margin: 0 0 10px 0;
+					letter-spacing: 0;
+					font-weight: 500;
+					display:block;
+				}
+				
+				span{
+					font-size:1em;
+					font-weight:200;
+					font-style:italic;
+					margin: 0 0 13px 0;
+					display:block;
+				}
+				
+				.social{
+					display:block;
+					
+					a{
+						display:inline-block;
+						color:$white;
+						margin:0 5px;
+						
+						&:hover{
+							color:$documentTextColorDarkest;
+						}
+					}
+				}
+			}
+		}
+		
+		&:hover .flipper{
+			@include transform(rotateY(180deg));
+		}
+		
+		.info{
+			@include floatWidth;
+			text-align:center;
+			background:$lightGray;
+			padding:20px 0;
+			
+			h3{
+				font-size:1.188em;
+				font-weight:600;
+				color:$documentTextColorDarker;
+				margin:0;
+				display:block;
+				padding: 0 0 5px 0;
+			}
+			
+			span{
+				font-weight:600;
+				color:$mainColor;
+				font-style:italic;
+			}
+		}	
+	}
+}
+
+.teamInfo{
+
+	h2{
+		@include floatWidth;
+		font-size:1.438em;
+		color:$mainColor;
+		margin:0 0 25px 0;
+		font-weight:600;
+		@include letterSpacing;
+	}
+	
+	p{
+		font-size:1.063em;
+		font-weight:300;
+		line-height:20px;
+		margin:0 0 30px 0;
+	}
+	
+	a.btn{
+		@include buttonStyle2;
+		padding: 8px 28px 6px 28px;
+		display:inline-block;
+	}
+	
+	.skills{
+		@include floatWidth;
+		
+		.skillItem{
+			@include floatWidth;
+			padding:0 0 30px 0;
+			
+			h3{
+				@include floatWidth;
+				font-size:1.188em;
+				font-weight:600;
+				color:$documentTextColorDarker;
+				margin:0 0 18px 0;
+			}
+			
+			.skill{
+				@include floatWidth;
+				height:10px;
+				background:$skillBk;
+				
+				span{
+					height:10px;
+					background:$mainColor;
+					float:left;
+					width:0%;
+				}
+			}
+		}	
+	}
+}

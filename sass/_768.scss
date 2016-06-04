@@ -1,0 +1,123 @@
+/*Tablet Styling*/
+
+@media only screen and (min-width: 768px) {
+	.large-hidden{
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.row{
+		padding:0 10px;
+	}
+
+	.medium-hidden{
+		display:none;
+	}
+	.medium-show{
+		display:block;
+	}
+	
+	.topBar{
+		display:none;
+	}
+	
+	header nav ul{
+		width:100%;
+		padding:10px 0 0 0;
+		margin:20px 0 0 0;
+		border-top: 2px solid $lightGraySep;
+		
+		li{
+			@include floatWidth;
+			padding: 0 0 10px 0;
+			border-bottom: 2px solid $lightGraySep;
+			margin: 0 0 10px 0;
+			
+			a{
+				@include floatWidth;	
+			}
+		}
+	}
+	
+	section.banner{ 
+		a.prev{
+			display:none;
+		}
+		
+		a.next{
+			display:none;
+		}
+		
+		.downArrow{
+			display:none;
+		}
+	
+	}
+	
+	.teamInfo .skills{
+		padding:50px 0 0 0;
+	}
+	
+	.teamMembers{
+		
+		padding:0 0 30px 0;
+	
+		article.member{
+			margin:0 0 20px 0;
+		}
+	}
+	
+	section.services .service a .iconHolder{
+		width:110px;
+		height:110px;
+		
+		i{
+			font-size: 3.7em;
+			line-height: 110px;
+		}
+	}
+	
+	.prices {
+		
+		padding:0 0 50px 0;
+		
+		.pricesInfo .priceHolder article{
+			width:50%;
+			border-top:1px solid $lightGraySep;
+		}
+	}
+	
+	section.parallax{
+		margin:0;
+	}
+	
+	section.blog{
+		padding:0 0 50px 0;
+	}
+	
+	section.contact input[type="text"]{
+		margin:0 0 10px 0;
+	}
+	
+	footer{
+		margin:0;
+		.social{
+			width:auto;
+			
+			a{
+				margin: 0 20px 0 0;
+			}
+		}
+	}
+	
+	section.works .row{
+		padding:0;
+	}
+	
+	section.blog .row{
+		padding:0;
+	}
+
+}

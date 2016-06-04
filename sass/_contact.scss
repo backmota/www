@@ -1,0 +1,63 @@
+/*Contact*/
+
+section.contact{
+	@include floatWidth;
+	@include generalPadding;
+	
+	.error{
+		background:$red !important;
+		color:$white !important;
+	}
+	
+	input[type="text"]{
+		@include floatWidth;
+		box-sizing:border-box;
+		background:$formColor;
+		border:0;
+		@include border-radius(5px);
+		padding:15px 15px;
+		outline:0;
+		margin:0 0 20px 0;
+		color:$documentTextColorDarker;
+		font-size:1.125em;
+		text-align:center;
+		@include transition(all ease-in 0.3s);
+		
+		&:focus{
+			background:$mainColor;
+			color:$white;
+		}
+	}
+	
+	textarea{
+		@include floatWidth;
+		box-sizing:border-box;
+		background:$formColor;
+		border:0;
+		@include border-radius(5px);
+		padding:25px 15px;
+		outline:0;
+		margin:0 0 20px 0;
+		color:$documentTextColorDarker;
+		font-size:1.125em;
+		text-align:center;
+		min-height:199px;
+		resize:none;
+		@include transition(all ease-in 0.3s);
+		
+		&:focus{
+			background:$mainColor;
+			color:$white;
+		}
+		
+	}
+	
+	input[type="submit"]{
+		@include buttonStyle2;
+		@include floatWidth;
+		padding:10px 0;
+		margin:20px 0 0 0;
+		font-size:1.125em;
+	}
+
+}

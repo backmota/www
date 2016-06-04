@@ -1,0 +1,92 @@
+/*Top Bar*/
+
+.topBar{
+	@include floatWidth;
+	background:$lightGray;
+	border-bottom:1px solid $lightGraySep;
+	padding:5px 0;
+	
+	a{
+		float:right;
+		font-size:1em;
+		color:$iconsColor;
+		margin: 0 0 0 10px;
+		@include transition(color 0.3s ease-in, color 0.35s ease-out);
+
+		&:hover{
+			color:$mainColor;
+		}
+	}
+}
+
+/*Header*/
+
+header{
+	@include floatWidth;
+	padding:30px 0 22px 0;
+	border-bottom:6px solid rgba($mainColor, .63);
+	background:$white;
+	
+	a.logo{
+		font-size: 1.875em;
+		font-weight:700;
+		color:$logoColor;
+		@include letterSpacing;
+		
+		
+		&:hover{
+			color:$mainColor;
+		}
+	}
+	
+	a.mobileMenuIcon{
+		float:right;
+		margin:-3px 0 0 0;
+		
+		&:hover i{
+			color:$mainColor;
+		}
+		
+		i{
+			color:$documentTextColor;
+			font-size:2em;
+			
+		}
+	}
+	
+	nav{
+		
+		ul{
+			float:right;
+			list-style:none;
+			margin:0;
+			line-height:1em;
+			padding:4px 0 0 0;
+			
+			li{
+				float:left;
+				padding: 0 0 4px 0;
+				margin: 0 0 0 33px;
+				
+				&:hover{
+					a{
+						color:$mainColor;
+					}
+				}
+				
+				&.selected{
+					a{
+						color:$mainColor;
+					}
+				}
+				
+				a{
+					@include letterSpacing;
+					font-size:1.125em;
+					color:$documentTextColor;
+					@include transition(color 0.3s ease-in);
+				}
+			}
+		}
+	}
+}

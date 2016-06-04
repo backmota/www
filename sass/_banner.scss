@@ -1,0 +1,210 @@
+/*Banner*/
+
+section.banner{
+	@include floatWidth;
+	position:relative;
+	overflow:hidden;
+
+	.bannerImages{
+		@include floatWidth;
+		height:560px;
+		overflow:hidden;
+	
+		.slide{
+			@include floatWidth;
+			position:relative;
+			height:560px;
+			
+			.text{
+				position:absolute;
+				@include floatWidth;
+				height:100%;
+				z-index:2;
+				display:table;
+				margin:-1000px 0 0 0;
+				padding: 0 20px;
+				box-sizing:border-box;
+				
+				.holder{
+					margin:0 auto;
+					width:960px;
+					text-align:center;
+					display:table-cell;
+					vertical-align:middle;
+				
+					h2{
+						font-weight:200;
+						font-size:3.125em;
+						color:$white;
+						margin:0 0 20px 0;
+						@include floatWidth;
+						text-align:center;
+					}
+					
+					p{
+						font-size:1.375em;
+						font-weight:200;
+						color:$white;
+						margin:0;
+						line-height:26px;
+						@include floatWidth;
+						text-align:center;
+					}
+					
+					a{
+						@include buttonStyleBanner;
+						padding:10px 25px;
+						display:inline-block;
+						margin:50px 0 0 0;
+						font-size:1.188em;
+						opacity:0;
+					}
+				}
+			}
+			
+			img{
+				max-width:1920px;
+				position:absolute;
+				left:50%;
+				top:0;
+				margin:0 0 0 -960px;
+				z-index:1;
+			}
+		}
+	
+	}
+	
+	a.prev{
+		position:absolute;
+		left:30px;
+		top:120%;
+		color:$bannerIcons;
+		z-index:100;
+		font-size:4.250em;
+		margin:-34px 0 0 0;
+		@include transition(top 0.3s ease-in);
+		
+		i{
+			@include opacity(0.35);
+			@include transition(opacity 0.3s ease-in);
+			
+			&:hover{
+				@include opacity(1);
+			}
+			
+		}
+		
+	}
+	
+	a.next{
+		position:absolute;
+		right:30px;
+		top:120%;
+		color:$bannerIcons;
+		z-index:100;
+		font-size:4.250em;
+		margin:-34px 0 0 0;
+		@include transition(top 0.3s ease-in);
+		
+		i{
+			@include opacity(0.35);
+			@include transition(opacity 0.3s ease-in);
+			
+			&:hover{
+				@include opacity(1);
+			}
+			
+		}
+	}
+	
+	&:hover a.prev{
+		@include transition(top 0.3s ease-in);
+		top:50%;
+	}
+	
+	&:hover a.next{
+		@include transition(top 0.3s ease-in);
+		top:50%;
+	}
+	
+	.downArrow{
+		@include floatWidth;
+		position:absolute;
+		bottom:0;
+		left:0;
+		z-index:100;
+		
+		a.down{
+			@include floatWidth;
+			height:60px;
+			background:#fff;
+			text-align:center;
+			
+			i{
+				color:$mainColor;
+				font-size:1.688em;
+				line-height:60px;
+				@include transition(line-height 0.1s ease-in);
+			}
+			
+			&:hover i{
+				line-height:80px;
+			}
+			
+		}
+	}
+	
+	.bannerNav{
+		@include floatWidth;
+		position:absolute;
+		bottom:65px;
+		left:0;
+		z-index:100;
+		text-align:center;
+		
+		span{
+			display:inline-block;
+			width:40px;
+			height:5px;
+			margin:0 3px;
+			overflow:hidden;
+			background:$bannerIcons;
+			text-indent:10000px;
+			@include opacity(0.35);
+			@include transition(all 0.3s ease-in);
+			cursor:pointer;
+			
+			&.cycle-pager-active{
+				@include opacity(1);
+				background:$mainColor;
+			}
+			
+			&:hover{
+				@include opacity(1);
+				background:$mainColor;
+			}
+		}
+	}
+}
+
+/*Welcome Text*/
+
+section.welcomeText{
+	@include floatWidth;
+	padding:60px 0;
+	
+	h1{
+		margin:0;
+		text-align:center;
+		font-size: 1.7em;
+		font-weight:300;
+		line-height:32px;
+		color:$documentTextColorDarker;
+		
+		span{
+			color:$mainColor;
+			text-decoration:underline;
+			font-weight:400;
+		}
+	}
+}

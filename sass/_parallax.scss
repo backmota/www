@@ -1,0 +1,46 @@
+/*Parallax*/
+
+section.parallax{
+	@include floatWidth;
+	height:457px;
+	margin:50px 0 50px 0;
+	background-repeat:no-repeat no-repeat;
+	background-attachment: fixed;
+	
+	.holder{
+		@include floatWidth;
+		height:457px;
+		display:table;
+		
+		.content{
+			display:table-cell;
+			vertical-align:middle;
+			
+			.box{
+				padding:60px;
+				box-sizing:border-box;
+				border:3px solid $white;
+				@include floatWidth;
+				text-align:center;
+				
+				h2{
+					font-size:1.875em;
+					font-weight:600;
+					color:$white;
+					margin:0 0 15px 0;
+				}
+				
+				p{
+					font-size:1.188em;
+					color:$white;
+					margin:0;
+					
+					span{
+						color:$mainColor;
+					}
+				}
+			}
+		}
+	}
+		
+}

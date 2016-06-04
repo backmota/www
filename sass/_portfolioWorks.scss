@@ -1,0 +1,182 @@
+/*Recent Works*/
+section.works{
+	@include floatWidth;
+	background:$lightGray;
+	@include generalPadding;
+	border-bottom:1px solid $lightGraySep;
+	border-top:1px solid $lightGraySep;
+	
+	.large-6.element{
+		width:48.7%;
+	}
+	
+	nav{
+		@include floatWidth;
+		text-align:center;
+		margin:0 0 40px 0;
+		
+		ul{
+			@include floatWidth;
+			text-align:center;
+			list-style:none;
+			margin:0;
+			padding:0;
+			
+			li{
+				display:inline-block;
+				
+				a{
+					display:block;
+					font-size:0.875em;
+					font-weight:600;
+					color:$documentTextColorDarker;
+					padding:3px 13px;
+					border:2px solid rgba($documentTextColorDarker, .5);
+					@include transition(color 0.2s ease-in, background 0.2s ease-in, border-color 0.2s ease-in);
+					
+					&:hover, &.current{
+						color:$white;
+						background:$mainColor;
+						border-color:$mainColor;
+					} 
+				}
+			}
+		}
+	}
+	
+	article.portfolioItem{
+		@include floatWidth;
+		@include perspective(1000);
+		margin:0 0 20px 0;
+	
+		.flipper, .front, .back{
+			@include floatWidth;
+		}
+		
+		.flipper {
+			@include transition(1s);
+			@include transform-style(preserve-3d);
+			position: relative;
+			
+			&.first{
+				@include opacity(0);
+			}
+		}
+		
+		.front, .back {
+			@include backface-visibility(hidden);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		
+		.front{
+			z-index:2;
+		}
+		
+		.back {
+			@include transform(rotateY(180deg));
+			background:$mainColor;
+			display:table;
+			
+			.holder{
+				display:table-cell;
+				vertical-align:middle;
+				text-align:center;
+				color: $white;
+				
+				h4{
+					font-size: 1.625em;
+					margin: 0 0 5px 0;
+					letter-spacing: 0;
+					font-weight: 500;
+				}
+				
+				span{
+					font-size:1em;
+					font-weight:200;
+					font-style:italic;
+				}
+			}
+		}
+		
+		&:hover .flipper{
+			@include transform(rotateY(180deg));
+		}
+	}
+	
+	.btn{
+		
+		text-align:center;
+		@include floatWidth;
+		margin:30px 0 0 0;
+	
+		a.more{
+			@include buttonStyle2;
+			font-size:1.188em;
+			padding:8px 28px 6px 28px;
+			line-height:21px;
+			display:inline-block;
+		}
+	}
+}
+
+/*Recent Works*/
+section.team{
+	@include floatWidth;
+	@include generalPadding;
+}
+
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
